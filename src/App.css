@@ -1,42 +1,38 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Reset default browser styling from App.css section */
+/* The main body/html reset is now in index.css */
+
+/* Base application container */
+.App {
   text-align: center;
+  padding: 0; 
+  /* The display: flex and min-height is now in index.css, no need to duplicate here */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Style for the header to look clean */
+header {
+  padding: 0 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style to ensure the map container covers the width */
+.leaflet-container {
+    width: 100%;
+    height: 100%; /* Important for maps inside flex containers */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* NEW CLASS: This class adds the desired left/right padding and centering */
+.content-area {
+    width: 100%;
+    max-width: 1400px; /* Limits the size on huge monitors */
+    margin: 0 auto; /* Centers the container */
+    padding: 0 30px; /* Adds the small gap on the left and right */
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* NEW: Style the main area within the content-area */
+.main-map-area {
+    /* If this is the only element, it will take the full width of .content-area,
+       which has the desired padding. */
+    padding-bottom: 20px;
 }

@@ -8,5 +8,80 @@
       "longitude": 28.0519
     },
     "services": ["Teller", "ATM"]
+  },
+
+
+
+
+  {
+    "id": "CPT001",
+    "name": "Capitec Bank Bellville Tyger Valley Centre Branch",
+    "coordinates": {
+      "latitude": -33.87386,
+      "longitude":  18.63548
+    },
+    "services": ["Teller", "ATM", "Loan Consultations"]
+  },
+
+
+
+
+  {
+    "id": "CPT002",
+    "name": "Capitec Bank Cape Town Gardens Centre Branch",
+    "coordinates": {
+      "latitude": -33.93451,
+      "longitude": 18.41786
+    },
+    "services": ["Teller", "ATM", "Loan Consultations"]
+  },
+
+
+
+    {
+    "id": "CPT003",
+    "name": "Capitec Bank Stellenbosch Eikestad Mall Branch",
+    "coordinates": {
+      "latitude": -33.93578, 
+      "longitude": 18.86014
+    },
+    "services": ["Teller", "ATM", "Loan Consultations"]
+  },
+
+
+
+    {
+    "id": "CPT004",
+    "name": "Capitec Bank Stellenbosch Die Boord Branch",
+    "coordinates": {
+      "latitude": -33.94401,
+      "longitude": 18.85183
+    },
+    "services": ["Teller", "ATM", "Loan Consultations"]
+  },
+
+
+
+   {
+    "id": "CPT005",
+    "name": "Capitec Bank Kenilworth Centre Branch",
+    "coordinates": {
+      "latitude": -33.98844,
+      "longitude": 18.48455
+    },
+    "services": ["Teller", "ATM", "Loan Consultations"]
+  }, 
+
+
+
+  
+   {
+    "id": "CPT006",
+    "name": "Capitec Bank Paarl Mall Branch",
+    "coordinates": {
+      "latitude": -33.76516334310903,
+      "longitude": 18.968023631568773
+    },
+    "services": ["Teller", "ATM", "Loan Consultations"]
   }
 ]

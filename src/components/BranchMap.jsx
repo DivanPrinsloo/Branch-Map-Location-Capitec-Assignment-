@@ -20,7 +20,7 @@ const DEFAULT_CENTER = [-29.5, 24.5];
 // The component receives the array of branches as a prop
 export const BranchMap = ({ branches }) => {
   // We set a fixed size for the map container using inline style
-  const mapStyle = { height: '80vh', width: '200vh' }; 
+  const mapStyle = { height: '75vh', width: '100%'}; 
 
   return (
     <MapContainer 
