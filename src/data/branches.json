@@ -1,0 +1,12 @@
+
+[
+  {
+    "id": "JHB001",
+    "name": "Sandton City Branch",
+    "coordinates": {
+      "latitude": -26.1077,
+      "longitude": 28.0519
+    },
+    "services": ["Teller", "ATM"]
+  }
+]
