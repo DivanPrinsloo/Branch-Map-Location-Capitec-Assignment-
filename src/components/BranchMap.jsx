@@ -3,6 +3,8 @@
 import { useState, useMemo, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import capitecBranch from '../assets/capitecBranch.jpg';
+
 
 // Set a default center for the map (e.g., central South Africa)
 const DEFAULT_CENTER = [-29.5, 24.5];
@@ -15,7 +17,7 @@ const MapFlyToBranch = ({ branch }) => {
     if (!branch) return;
 
     const { latitude, longitude } = branch.coordinates;
-    map.flyTo([latitude, longitude], 14, {
+    map.flyTo([latitude, longitude], 17, {
       duration: 0.8,
     });
   }, [branch, map]);
@@ -23,12 +25,32 @@ const MapFlyToBranch = ({ branch }) => {
   return null;
 };
 
-export const BranchMap = ({ branches }) => {
+// Resets map when resetToken changes (logo click)
+const MapResetView = ({ resetToken }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    if (!resetToken) return; // ignore initial render
+
+    map.flyTo(DEFAULT_CENTER, 6, {
+      duration: 0.8,
+    });
+  }, [resetToken, map]);
+
+  return null;
+};
+
+export const BranchMap = ({ branches, resetToken  }) => {
   const mapStyle = { height: '89.3vh', width: '100%' };
 
   // SEARCH STATE
   const [query, setQuery] = useState('');
   const [selectedBranch, setSelectedBranch] = useState(null);
+
+  useEffect(() => {
+    if (!resetToken) return;
+    setSelectedBranch(null);
+  }, [resetToken]);
 
   const filteredBranches = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -57,6 +79,7 @@ export const BranchMap = ({ branches }) => {
       >
         {/* This component reacts to selectedBranch and flies the map */}
         <MapFlyToBranch branch={selectedBranch} />
+        <MapResetView resetToken={resetToken} />
 
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -71,6 +94,9 @@ export const BranchMap = ({ branches }) => {
               branch.coordinates.latitude,
               branch.coordinates.longitude,
             ]}
+            eventHandlers={{
+              click: () => setSelectedBranch(branch), // ← NEW: show panel on pin click
+            }}
           >
             <Popup>
               <strong>{branch.name}</strong>
@@ -79,9 +105,9 @@ export const BranchMap = ({ branches }) => {
             </Popup>
           </Marker>
         ))}
+
       </MapContainer>
 
-      {/* 🔹 Floating search UI */}
       <div className="map-search-overlay">
         <div className="map-search-input-wrapper">
           <input
@@ -128,8 +154,40 @@ export const BranchMap = ({ branches }) => {
           <div className="map-search-no-results">
             No branches match "{query}"
           </div>
-        )}
+           )}
       </div>
+
+       {selectedBranch && (
+        <div className="branch-info-panel">
+          <button
+            className="branch-info-close"
+            onClick={() => setSelectedBranch(null)}
+            type="button"
+          >
+            ✕
+          </button>
+
+          <img
+            src={capitecBranch}
+            alt="Capitec branch"
+            className="branch-info-image"
+          />
+
+          <h3 className="branch-info-title">{selectedBranch.name}</h3>
+
+          <div className="branch-info-body">
+            <p>
+              <strong>Branch ID:</strong> {selectedBranch.id}
+            </p>
+            <p>
+              <strong>Services:</strong>{' '}
+              {selectedBranch.services
+                ? selectedBranch.services.join(', ')
+                : 'N/A'}
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
