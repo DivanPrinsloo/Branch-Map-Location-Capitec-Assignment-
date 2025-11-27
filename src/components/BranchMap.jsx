@@ -20,12 +20,14 @@ const DEFAULT_CENTER = [-29.5, 24.5];
 // The component receives the array of branches as a prop
 export const BranchMap = ({ branches }) => {
   // We set a fixed size for the map container using inline style
-  const mapStyle = { height: '75vh', width: '100%'}; 
+  const mapStyle = { height: '89.4vh', width: '100%'}; 
 
   return (
     <MapContainer 
       center={DEFAULT_CENTER} 
-      zoom={5} 
+      zoom={6} 
+      minZoom={5}
+      maxZoom={18}
       style={mapStyle} 
       scrollWheelZoom={true}
     >
@@ -33,6 +35,7 @@ export const BranchMap = ({ branches }) => {
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        noWrap={true}
       />
 
       {/* Map over the branches array to place a marker for each one */}

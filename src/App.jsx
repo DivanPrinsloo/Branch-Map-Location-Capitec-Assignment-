@@ -1,25 +1,27 @@
 // src/App.jsx
-
-import './App.css'; 
+import './App.css';
 import { BranchMap } from './components/BranchMap';
-import branchData from './data/branches.json'; // Import your mock data
+import branchData from './data/branches.json';
+import logo from './assets/capitec.png';
 
 function App() {
-  // The imported JSON data is ready to use!
-  const branches = branchData; 
+  const branches = branchData;
 
   return (
     <div className="App">
-      <header>
-        <h1>Capitec Branch Locations</h1>
-        <p>Find your nearest branch with detailed information</p>
+      <header className="app-header">
+        <img src={logo} alt="Capitec logo" className="app-logo" />
+
+        <div className="app-header-center">
+          <h1>Capitec Branch Locations</h1>
+          <p>Find your nearest branch with detailed information</p>
+        </div>
       </header>
-      <div className="content-area">
-      <main style={{ padding: '0' }}>
-        {/* Pass the branch data to the Map component */}
+
+    
+      <main className="map-wrapper">
         <BranchMap branches={branches} />
       </main>
-      </div>
     </div>
   );
 }
