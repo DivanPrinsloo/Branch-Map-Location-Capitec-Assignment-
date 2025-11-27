@@ -11,6 +11,19 @@
   },
 
 
+  {
+      "id": "JB004",
+      "name": "Capitec Bank Colesberg Church Street branch",
+      "coordinates": {
+        "latitude": -30.721304692527728, 
+        "longitude":  25.096574735967558
+      },
+      "services": ["Teller", "ATM", "Loan Consultations"]
+    },
+
+
+
+
 
 
   {
@@ -24,8 +37,6 @@
   },
 
 
-
-
   {
     "id": "CPT002",
     "name": "Capitec Bank Cape Town Gardens Centre Branch",
@@ -37,32 +48,29 @@
   },
 
 
-
-    {
-    "id": "CPT003",
-    "name": "Capitec Bank Stellenbosch Eikestad Mall Branch",
-    "coordinates": {
-      "latitude": -33.93578, 
-      "longitude": 18.86014
-    },
-    "services": ["Teller", "ATM", "Loan Consultations"]
+  {
+  "id": "CPT003",
+  "name": "Capitec Bank Stellenbosch Eikestad Mall Branch",
+  "coordinates": {
+    "latitude": -33.93578, 
+    "longitude": 18.86014
+  },
+  "services": ["Teller", "ATM", "Loan Consultations"]
   },
 
 
-
-    {
-    "id": "CPT004",
-    "name": "Capitec Bank Stellenbosch Die Boord Branch",
-    "coordinates": {
-      "latitude": -33.94401,
-      "longitude": 18.85183
-    },
-    "services": ["Teller", "ATM", "Loan Consultations"]
+  {
+  "id": "CPT004",
+  "name": "Capitec Bank Stellenbosch Die Boord Branch",
+  "coordinates": {
+    "latitude": -33.94401,
+    "longitude": 18.85183
+  },
+  "services": ["Teller", "ATM", "Loan Consultations"]
   },
 
 
-
-   {
+  {
     "id": "CPT005",
     "name": "Capitec Bank Kenilworth Centre Branch",
     "coordinates": {
@@ -73,14 +81,46 @@
   }, 
 
 
-
-  
    {
     "id": "CPT006",
     "name": "Capitec Bank Paarl Mall Branch",
     "coordinates": {
       "latitude": -33.76516334310903,
       "longitude": 18.968023631568773
+    },
+    "services": ["Teller", "ATM", "Loan Consultations"]
+  },
+
+
+  {
+    "id": "CPT007",
+    "name": "Capitec Bank Strand Square branch",
+    "coordinates": {
+      "latitude": -34.11530439698854,
+      "longitude":  18.829921604391124
+    },
+    "services": ["Teller", "ATM", "Loan Consultations"]
+  },
+
+
+
+
+  {
+    "id": "PE001",
+    "name": "Capitec Bank PE Govan Mbeki 64 branch",
+    "coordinates": {
+      "latitude": -33.9605715801609, 
+      "longitude": 25.62122298827377
+    },
+    "services": ["Teller", "ATM", "Loan Consultations"]
+  },
+
+  {
+    "id": "PE002",
+    "name": "Capitec Bank Uitenhage Caledon branch",
+    "coordinates": {
+      "latitude": -33.76767827818488,
+      "longitude":  25.401848794474517
     },
     "services": ["Teller", "ATM", "Loan Consultations"]
   }

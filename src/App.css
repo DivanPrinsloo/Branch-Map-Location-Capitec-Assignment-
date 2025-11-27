@@ -1,38 +1,66 @@
-/* Reset default browser styling from App.css section */
-/* The main body/html reset is now in index.css */
+/* src/App.css */
 
-/* Base application container */
+/* Overall app container uses flex column to allow header + full-height map */
 .App {
-  text-align: center;
-  padding: 0; 
-  /* The display: flex and min-height is now in index.css, no need to duplicate here */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff;
 }
 
-/* Style for the header to look clean */
-header {
-  padding: 0 20px;
-  background-color: #f0f0f0;
-  text-align: center;
-
+/* HEADER */
+.app-header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e3e3e3;
+  padding: 16px 24px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-/* Style to ensure the map container covers the width */
+/* Logo pinned to the left edge */
+.app-logo {
+  height: 55px;
+  width: auto;
+  position: absolute;
+  left: 24px; 
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Centered text container */
+.app-header-center {
+  flex: 1; 
+  text-align: center;
+}
+
+.app-header-center h1 {
+  margin: 0;
+  color: #0f37b9;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.app-header-center p {
+  margin: 4px 0 0;
+  color: #3b3b3b;
+  font-size: 0.95rem;
+}
+
+
+/* MAP AREA */
+
+/* main should grow and hold the map */
+.map-wrapper {
+  flex: 1;          /* take all remaining vertical space */
+  min-height: 0;    /* important so the map can shrink/grow correctly */
+}
+
+/* Leaflet container should fill the wrapper completely */
+.branch-map,
 .leaflet-container {
-    width: 100%;
-    height: 100%; /* Important for maps inside flex containers */
-}
-
-/* NEW CLASS: This class adds the desired left/right padding and centering */
-.content-area {
-    width: 100%;
-    max-width: 1400px; /* Limits the size on huge monitors */
-    margin: 0 auto; /* Centers the container */
-    padding: 0 30px; /* Adds the small gap on the left and right */
-}
-
-/* NEW: Style the main area within the content-area */
-.main-map-area {
-    /* If this is the only element, it will take the full width of .content-area,
-       which has the desired padding. */
-    padding-bottom: 20px;
+  width: 100%;
+  height: 100%;
 }
