@@ -54,8 +54,8 @@
 
 /* main should grow and hold the map */
 .map-wrapper {
-  flex: 1;          /* take all remaining vertical space */
-  min-height: 0;    /* important so the map can shrink/grow correctly */
+  flex: 1;          
+  min-height: 0;   
 }
 
 /* Leaflet container should fill the wrapper completely */
@@ -64,3 +64,95 @@
   width: 100%;
   height: 100%;
 }
+
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Floating search overlay */
+.map-search-overlay {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+/* Style the search input */
+.map-search-input {
+  width: 340px;
+  height: 40px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 2px solid #cbd5f5;
+  background: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.map-search-input:focus {
+  border-color: #0f37b9;
+  box-shadow: 0 0 0 4px rgba(15, 55, 185, 0.2);
+}
+
+/* Dropdown below the search input */
+.map-search-results {
+  width: 260px;              /* same as input width */
+  margin-top: 4px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 4px 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+}
+
+.map-search-results li {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.map-search-results li:hover {
+  background-color: #f3f5ff;
+}
+
+/* "No results" pill */
+.map-search-no-results {
+  width: 260px;
+  margin-top: 4px;
+  padding: 6px 10px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.map-search-input-wrapper {
+  position: relative;
+  width: 260px;
+}
+
+
+.map-clear-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0;
+}
+
+.map-clear-btn:hover {
+  color: #0f37b9;
+}
+
