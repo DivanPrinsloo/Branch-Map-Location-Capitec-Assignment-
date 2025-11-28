@@ -80,4 +80,64 @@ src/
 
   ## How to run project
 
-  
+Option 1 — Run with Docker (Production Build)
+1. Build the Docker image
+docker build -t capitec-map-app .
+
+2. Run the container
+docker run -p 5173:80 capitec-map-app
+
+
+Your application will now be available at:
+
+- http://localhost:5173
+
+- Option 2 — Run with Docker Compose (Recommended)
+
+--- 
+
+To automatically build and start the container:
+
+docker compose up --build
+
+
+This will:
+
+Build the Vite app
+
+Start Nginx inside the container
+
+Map container port 80 → localhost:5173
+
+Access the app at:
+
+- http://localhost:5173
+
+- How the Docker Setup Works
+
+--- 
+
+The Docker system uses a clean two-stage build:
+
+**Stage 1 — Build (Node + Vite)**
+
+Installs dependencies
+
+Runs npm run build
+
+Outputs optimized static files into /dist
+
+**Stage 2 — Serve (Nginx)**
+
+Copies the built files into Nginx’s web root (/usr/share/nginx/html)
+
+Uses a custom nginx.conf with:
+
+try_files $uri /index.html;
+
+--- 
+
+
+This ensures client-side React routing continues to work even when refreshing or entering URLs directly.
+
+The container exposes port 80, which Docker maps to 5173 on your machine.
