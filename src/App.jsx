@@ -1,4 +1,3 @@
-// src/App.jsx
 import { useState } from 'react';
 import './App.css';
 import { BranchMap } from './components/BranchMap';
@@ -8,22 +7,22 @@ import logo from './assets/capitec.png';
 function App() {
   const branches = branchData;
 
-  const [resetToken, setResetToken] = useState(0);
+  const [resetToken, setResetToken] = useState(0);  //token to reset map state
 
   const handleLogoClick = () => {
-    setResetToken((prev) => prev + 1);
+    setResetToken((prev) => prev + 1);  //increment token to trigger reset
   };
 
 
 
-  return (
+  return (  //main app component
     <div className="App">
       <header className="app-header">
        <img
           src={logo}
           alt="Capitec logo"
           className="app-logo"
-          onClick={handleLogoClick}
+          onClick={handleLogoClick}  
         />
 
         <div className="app-header-center">

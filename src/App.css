@@ -1,4 +1,4 @@
-/* src/App.css */
+
 
 /* Overall app container uses flex column to allow header + full-height map */
 .App {
@@ -102,7 +102,7 @@
 
 /* Dropdown below the search input */
 .map-search-results {
-  width: 260px;              /* same as input width */
+  width: 260px;              
   margin-top: 4px;
   background: #ffffff;
   border-radius: 12px;
@@ -213,4 +213,54 @@
 
 .branch-info-body p {
   margin: 4px 0;
+}
+  /* Location button and nearest branches list */
+.map-location-btn {
+  margin-top: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid #0f37b9;
+  background: #0f37b9;
+  color: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.map-location-btn:hover {
+  background: #102c8a;
+}
+
+.location-error {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: #c0392b;
+}
+
+.nearest-list {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0;
+}
+
+.nearest-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.nearest-list li:hover {
+  background-color: #f3f5ff;
+  border-radius: 8px;
+}
+
+.nearest-name {
+  flex: 1;
+}
+
+.nearest-distance {
+  font-weight: 600;
+  color: #0f37b9;
 }
