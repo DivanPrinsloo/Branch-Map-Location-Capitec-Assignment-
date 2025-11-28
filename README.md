@@ -141,3 +141,7 @@ try_files $uri /index.html;
 This ensures client-side React routing continues to work even when refreshing or entering URLs directly.
 
 The container exposes port 80, which Docker maps to 5173 on your machine.
+
+--- 
+
+If fails please inform me as I have not made use of Docker before and tried to have it working
