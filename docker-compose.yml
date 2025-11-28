@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  capitec-map-app:
+    build: .
+    ports:
+      - "5173:80"
+    container_name: capitec-map-app
+    restart: unless-stopped

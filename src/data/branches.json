@@ -1,4 +1,3 @@
-
 [
   {
     "id": "JHB001",
@@ -7,35 +6,34 @@
       "latitude": -26.1077,
       "longitude": 28.0519
     },
-    "services": ["Teller", "ATM"]
+    "services": ["Teller", "ATM"],
+    "phone": "011 555 1200",
+    "email": "sandton@capitecbank.co.za"
   },
 
-
   {
-      "id": "JB004",
-      "name": "Capitec Bank Colesberg Church Street branch",
-      "coordinates": {
-        "latitude": -30.721304692527728, 
-        "longitude":  25.096574735967558
-      },
-      "services": ["Teller", "ATM", "Loan Consultations"]
+    "id": "JB004",
+    "name": "Capitec Bank Colesberg Church Street Branch",
+    "coordinates": {
+      "latitude": -30.721304692527728,
+      "longitude": 25.096574735967558
     },
-
-
-
-
-
+    "services": ["Teller", "ATM", "self service terminal "],
+    "phone": "051 555 8841",
+    "email": "colesberg@capitecbank.co.za"
+  },
 
   {
     "id": "CPT001",
     "name": "Capitec Bank Bellville Tyger Valley Centre Branch",
     "coordinates": {
       "latitude": -33.87386,
-      "longitude":  18.63548
+      "longitude": 18.63548
     },
-    "services": ["Teller", "ATM", "Loan Consultations"]
+    "services": ["Teller", "ATM", "Loan Consultations"],
+    "phone": "021 555 2100",
+    "email": "tygervalley@capitecbank.co.za"
   },
-
 
   {
     "id": "CPT002",
@@ -44,31 +42,34 @@
       "latitude": -33.93451,
       "longitude": 18.41786
     },
-    "services": ["Teller", "ATM", "Loan Consultations"]
+    "services": ["Teller", "ATM", "Loan Consultations"],
+    "phone": "021 555 4821",
+    "email": "gardens@capitecbank.co.za"
   },
-
 
   {
-  "id": "CPT003",
-  "name": "Capitec Bank Stellenbosch Eikestad Mall Branch",
-  "coordinates": {
-    "latitude": -33.93578, 
-    "longitude": 18.86014
+    "id": "CPT003",
+    "name": "Capitec Bank Stellenbosch Eikestad Mall Branch",
+    "coordinates": {
+      "latitude": -33.93578,
+      "longitude": 18.86014
+    },
+    "services": ["Teller", "ATM", "Loan Consultations"],
+    "phone": "021 808 9010",
+    "email": "eikestad@capitecbank.co.za"
   },
-  "services": ["Teller", "ATM", "Loan Consultations"]
-  },
-
 
   {
-  "id": "CPT004",
-  "name": "Capitec Bank Stellenbosch Die Boord Branch",
-  "coordinates": {
-    "latitude": -33.94401,
-    "longitude": 18.85183
+    "id": "CPT004",
+    "name": "Capitec Bank Stellenbosch Die Boord Branch",
+    "coordinates": {
+      "latitude": -33.94401,
+      "longitude": 18.85183
+    },
+    "services": ["Teller", "ATM", "Loan Consultations"],
+    "phone": "021 886 5520",
+    "email": "dieboord@capitecbank.co.za"
   },
-  "services": ["Teller", "ATM", "Loan Consultations"]
-  },
-
 
   {
     "id": "CPT005",
@@ -77,51 +78,56 @@
       "latitude": -33.98844,
       "longitude": 18.48455
     },
-    "services": ["Teller", "ATM", "Loan Consultations"]
-  }, 
+    "services": ["Teller", "ATM", "Loan Consultations"],
+    "phone": "021 671 4420",
+    "email": "kenilworth@capitecbank.co.za"
+  },
 
-
-   {
+  {
     "id": "CPT006",
     "name": "Capitec Bank Paarl Mall Branch",
     "coordinates": {
       "latitude": -33.76516334310903,
       "longitude": 18.968023631568773
     },
-    "services": ["Teller", "ATM", "Loan Consultations"]
+    "services": ["Teller", "ATM", "Loan Consultations"],
+    "phone": "021 872 5100",
+    "email": "paarlmall@capitecbank.co.za"
   },
-
 
   {
     "id": "CPT007",
-    "name": "Capitec Bank Strand Square branch",
+    "name": "Capitec Bank Strand Square Branch",
     "coordinates": {
       "latitude": -34.11530439698854,
-      "longitude":  18.829921604391124
+      "longitude": 18.829921604391124
     },
-    "services": ["Teller", "ATM", "Loan Consultations"]
+    "services": ["Teller", "ATM", "Loan Consultations"],
+    "phone": "021 853 1142",
+    "email": "strandsquare@capitecbank.co.za"
   },
-
-
-
 
   {
     "id": "PE001",
-    "name": "Capitec Bank PE Govan Mbeki 64 branch",
+    "name": "Capitec Bank PE Govan Mbeki 64 Branch",
     "coordinates": {
-      "latitude": -33.9605715801609, 
+      "latitude": -33.9605715801609,
       "longitude": 25.62122298827377
     },
-    "services": ["Teller", "ATM", "Loan Consultations"]
+    "services": ["Teller", "ATM", "Loan Consultations"],
+    "phone": "041 555 2180",
+    "email": "govanmbeki@capitecbank.co.za"
   },
 
   {
     "id": "PE002",
-    "name": "Capitec Bank Uitenhage Caledon branch",
+    "name": "Capitec Bank Uitenhage Caledon Branch",
     "coordinates": {
       "latitude": -33.76767827818488,
-      "longitude":  25.401848794474517
+      "longitude": 25.401848794474517
     },
-    "services": ["Teller", "ATM", "Loan Consultations"]
+    "services": ["Teller", "ATM", "Loan Consultations"],
+    "phone": "041 555 4410",
+    "email": "uitenhage@capitecbank.co.za"
   }
 ]

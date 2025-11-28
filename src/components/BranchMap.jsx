@@ -176,15 +176,15 @@ export const BranchMap = ({ branches, resetToken }) => {
               click: () => setSelectedBranch(branch), // clicking marker selects branch
             }}
           >
-            <Popup>
+            <Popup> 
               <strong>{branch.name}</strong>
               <br />
-              Services: {branch.services ? branch.services.join(', ') : 'N/A'}  //display services if available
+              Services: {branch.services ? branch.services.join(', ') : 'N/A'}  
             </Popup>
           </Marker>
-        ))}
+        ))} 
 
-      </MapContainer>
+      </MapContainer> 
 
       <div className="map-search-overlay"> 
         <div className="map-search-input-wrapper">
@@ -279,6 +279,14 @@ export const BranchMap = ({ branches, resetToken }) => {
                 {Math.round(selectedBranchDistanceKm)} km
               </p>
             )}
+
+            <p>
+              <strong>Phone:</strong> {selectedBranch.phone}
+            </p>
+
+            <p>
+              <strong>Email:</strong> {selectedBranch.email}
+            </p>
           </div>
         </div>
       )}
@@ -297,7 +305,7 @@ export const BranchMap = ({ branches, resetToken }) => {
 
           <div className="branch-info-body">  
             {userLocation && (
-              <p style={{ marginBottom: '6px', fontSize: '0.8rem' }}>  
+              <p style={{ marginBottom: '6px', fontSize: '1.4rem' }}>  
                 Showing 5 closest branches (straight-line distance)
               </p>
             )}
